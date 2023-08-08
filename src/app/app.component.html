@@ -1,0 +1,21 @@
+<nav class="navbar" #navbar>
+    <div class="container-fluid">
+      <a class="navbar-brand" [href]="queryParamsConfig.red"><img [src]="queryParamsConfig.log" alt=""></a>
+      <form class="d-flex">
+        <button class="btn btn-light mx-3" (click)="showInstructions()" type="button"><span class="mx-1">{{translationHelper.getTranslationByKey('VS_WEB_INSTRUCTIONS')}}</span> <img width="20" style="margin-bottom:1px" src="./assets/icons/info.png" alt=""></button>
+        <button class="btn btn-danger" (click)="endSession()" type="button">{{translationHelper.getTranslationByKey('VS_END_SCAN')}}</button>
+      </form>
+    </div>
+  </nav>
+<div class="container-fluid">
+    <app-facial-analysis></app-facial-analysis>
+</div>
+<div #loaderOverlay id="loaderOverlay">
+  <div
+      #loader
+      class="spinner-border"
+      role="status"
+    >
+      <span class="visually-hidden">Loading...</span>
+    </div>
+</div>

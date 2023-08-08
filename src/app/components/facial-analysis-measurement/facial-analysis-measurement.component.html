@@ -1,0 +1,15 @@
+<div class="measure-container card text-center">
+  <img class="measure-icon mx-auto my-2" #iconImg [src]="icon" alt="" />
+  <h3 *ngIf="isLoading">
+    <div
+      
+      class="spinner-border video-notifications"
+      role="status"
+    >
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </h3>
+
+  <h4 *ngIf="!isLoading" class="measure-value">{{ value }}</h4>
+  <p class="measure-title">{{ title }}</p>
+</div>

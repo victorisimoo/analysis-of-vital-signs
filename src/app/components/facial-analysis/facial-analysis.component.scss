@@ -1,0 +1,62 @@
+.monitor-container {
+    .video-container {
+        max-width: 1000px;
+        width: 100%;
+        margin: auto;
+        position: relative;
+    
+        #mask {
+            max-width: inherit;
+            position: absolute;
+            z-index: 2;
+            width: 100%;
+        }
+        
+        #monitor-video {
+            position:relative;
+            width: 100%;
+            transform: rotateY(180deg);
+            -webkit-transform: rotateY(180deg); /* Safari and Chrome */
+            -moz-transform: rotateY(180deg); /* Firefox */
+        }
+        
+        .video-notifications {
+            z-index: 3;
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            padding: 5px;
+            color: white;
+            visibility: hidden;
+        }
+        
+        .notification-error {
+            background-color: red !important;
+            visibility: visible;
+        }
+        .notification-success {
+            background-color: green;
+            visibility: visible;
+        }
+
+        .session-timer {
+            position: absolute;
+            bottom: 0px;
+            right: 15px;
+            font-size: 2rem;
+            color: white;
+            z-index: 4;
+            width: 100px;
+            text-align: end;
+        }
+    }
+
+     
+}
+
+@media only screen and (max-width: 600px) {
+    #mask {
+      display: none;
+    }
+  }
+

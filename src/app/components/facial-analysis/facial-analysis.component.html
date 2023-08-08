@@ -1,0 +1,163 @@
+<div class="row m-5">
+  <div class="col-sm-12 col-md-6">
+    <div class="monitor-container w-100">
+      <div>
+        <ng-container *ngIf="cameraStatus === 'LOADING'">
+          <div class="alert alert-primary" role="alert">
+            <div class="text-center">
+              <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+              <p>
+                {{
+                  translationsHelper.getTranslationByKey("VS_PREPARING_SESSION")
+                }}
+              </p>
+            </div>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="cameraStatus === 'NO_CAMERAS'">
+          <div class="alert alert-danger" role="alert">
+            <p>
+              {{
+                translationsHelper.getTranslationByKey(
+                  "VS_DEVICE_HAS_NO_CAMERAS"
+                )
+              }}
+            </p>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="cameraStatus === 'NO_PERMISSION'">
+          <div class="alert alert-danger text-center" role="alert">
+            <p>
+              {{
+                translationsHelper.getTranslationByKey(
+                  "CAMERA_PERMISSION_DENIED"
+                )
+              }}
+            </p>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="canSdkInit">
+          <label for="camera">{{
+            translationsHelper.getTranslationByKey("VS_CAMERA_LABEL")
+          }}</label>
+          <select
+            class="form-select mb-2"
+            id="camera"
+            aria-label="Cameras"
+            (change)="changeCamera($event)"
+          >
+            <option *ngFor="let camera of cameras; index as i" [value]="i">
+              {{ camera.label }}
+            </option>
+          </select>
+          <div  class="video-container">
+            <p class="video-notifications" #notificationMessage></p>
+            <div class="wrap">
+              <img id="mask" src="./../../../assets/mask.svg" alt="" />
+              <video
+                id="monitor-video"
+                muted="true"
+                autoplay="true"
+                #monitorVideo
+              ></video>
+            </div>
+
+            <p #sessionTimer class="session-timer">0:00</p>
+          </div>
+          
+          <p class="text-end" id="scan-action-btns">
+            <button
+              class="btn btn-primary"
+              (click)="startMonitoring()"
+              [disabled]="isScanning"
+            >
+              {{ translationsHelper.getTranslationByKey("VS_START_SCAN") }}
+            </button>
+            <button
+              class="btn btn-secondary ms-2"
+              (click)="stopMonitoring()"
+              [disabled]="!isScanning"
+            >
+              {{ translationsHelper.getTranslationByKey("VS_STOP_SCAN") }}
+            </button>
+            <!-- <button class="btn btn-danger ms-2" (click)="terminateMonitoring()">
+            Finalizar
+          </button> -->
+          </p>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-12 col-md-6">
+    <div class="measurements-container">
+      <div class="row">
+        <div class="col-sm-6 col-md-4 p-1">
+          <app-facial-analysis-measurement
+            #heartBeatMeasurement
+            [title]="translationsHelper.getTranslationByKey('VS_HEART_RATE')"
+            icon="assets/icons/heart-beat.png"
+            [value]="'---'"
+            [color]="corporationColor"
+          ></app-facial-analysis-measurement>
+        </div>
+        <div class="col-sm-6 col-md-4 p-1">
+          <app-facial-analysis-measurement
+            #breathingRateMeasurement
+            [title]="
+              translationsHelper.getTranslationByKey('VS_BREATHING_RATE')
+            "
+            icon="assets/icons/breathing-rate.png"
+            [value]="'---'"
+            [color]="corporationColor"
+          ></app-facial-analysis-measurement>
+        </div>
+        <div class="col-sm-6 col-md-4 p-1">
+          <app-facial-analysis-measurement
+            #oxygenSaturation
+            [title]="translationsHelper.getTranslationByKey('SATURATION')"
+            icon="assets/icons/oxygen-saturation.svg"
+            [value]="'---'"
+            [color]="corporationColor"
+          ></app-facial-analysis-measurement>
+        </div>
+        <div class="col-sm-6 col-md-4 p-1">
+          <app-facial-analysis-measurement
+            #stressLevelMeasurement
+            [title]="translationsHelper.getTranslationByKey('VS_STRESS_LEVEL')"
+            icon="assets/icons/stress-level.png"
+            [value]="'---'"
+            [color]="corporationColor"
+          ></app-facial-analysis-measurement>
+        </div>
+        <div class="col-sm-6 col-md-4 p-1">
+          <app-facial-analysis-measurement
+            #bloodPressure
+            [title]="translationsHelper.getTranslationByKey('VS_BLOOD_PRESURE')"
+            icon="assets/icons/blood-pressure.png"
+            [value]="'---'"
+            [color]="corporationColor"
+          ></app-facial-analysis-measurement>
+        </div>
+
+        <div class="col-sm-6 col-md-4 p-1">
+          <app-facial-analysis-measurement
+            #wellnessLevel
+            [title]="
+              translationsHelper.getTranslationByKey('VS_WELLNESS_LEVEL')
+            "
+            icon="assets/icons/wellness-level.png"
+            [value]="'---'"
+            [color]="corporationColor"
+          ></app-facial-analysis-measurement>
+        </div>
+      </div>
+
+      <!-- <p> <span #heartBeatMeasurement></span></p>
+            <p>Breathing rate <span #breathingRateMeasurement></span></p>
+            <p>SDNN <span #snddMeasurement></span></p>
+            <p>Stress level <span #stressLevelMeasurement></span></p> -->
+    </div>
+  </div>
+</div>

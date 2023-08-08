@@ -1,0 +1,263 @@
+
+/*
+#### BRAND: GYT ######
+*/
+
+
+body {
+	background-color: #f0f0f0;
+    background-image: url("gytblock.png");
+    background-repeat: repeat;
+}
+
+
+/*Adjusments*/
+
+
+/*End Adjusments*/
+
+.i-logo {
+	width: 433px;
+		display: initial !important;
+}
+
+.patient-logo {
+	width: 20em;
+}
+
+.brand{
+	background-color: #E0292B;
+}
+
+.confirm{
+	background-color: #E0292B !important;
+}
+
+.lv-message .lv-item:not(.right) .ms-item{
+	background-color: #E0292B !important;
+}
+
+#brand-header{
+	background-color: #E0292B;
+	padding: 40px 0
+}
+
+.bgm-yellow{
+	background-color: #E0292B !important;
+	border-radius: 10px;
+	color: #FFF;
+}
+
+.btn-login{
+	background-color: #E0292B;
+	border-radius: 10px;
+	color: #FFF;
+	border-bottom: 5px solid darkred;
+	font-weight: bold;
+}
+
+.header-inner {
+	padding: 1px 0;
+}
+
+.btn-action, .btn-action-sm {
+	background-color: #E0292B !important;
+	border-radius: 10px;
+	color: #FFF;
+	border-bottom: 5px solid darkred;
+	font-weight: bold;
+}
+
+.btn-default{
+	background-color: #E0292B !important;
+	border-radius: 10px;
+	color: #FFF;
+	border-bottom: 5px solid #E0292B;
+	font-weight: bold;
+}
+
+.btn-danger {
+	background-color: #E0292B !important;
+	border-radius: 10px;
+	color: #FFF;
+	border-bottom: 5px solid darkred;
+	font-weight: bold;
+}
+
+.form-control{
+	background-color: #FFF !important;
+}
+.btn-login:hover{
+	color: #FFF;
+}
+
+.lcb-form{
+	margin: 0;
+	padding: 0 !important;
+	border:0;
+	box-shadow: none;
+	background-color: transparent !important;
+}
+
+
+
+.lc-block:not(.lc-block-alt) .btn-login{
+	top:0;
+	margin-top: 0px;
+	right: inherit;
+}
+
+
+.login-content{
+	background-color: #f0f0f0;
+	background-image: url("gytblock.png");
+	background-repeat: repeat;
+}
+
+/**Login alignmnent*/
+
+.lc-block{
+	padding: 0px 0px 20% 0px;
+	max-width: 600px;
+	width: 75%;
+}
+
+#username{
+	font-size: 35px;
+}
+
+@media only screen and (max-width: 500px) {
+	.lc-block{
+		vertical-align: top;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.page-view{
+		padding-top:10vh;
+	}
+
+	.btn-action-touch {
+		min-height: 160px;
+		min-width: 260px;
+	}
+}
+
+.card-trans {
+background: transparent;
+box-shadow: 0px 0px 0px 0px;
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+	margin-top: 1px;
+	margin-bottom: 5px;
+}
+
+.fa-check-circle-o {
+	color: white;
+	align-items: center;
+  border-radius: 50%;
+  height: 1em;
+  width: 1em;
+}
+
+.modal-content-success {
+  background: #E0292B;
+	color: white;
+  border-radius: 10px;
+}
+
+.modal-content-error {
+  background: #808184;
+	color: white;
+  border-radius: 10px;
+}
+
+
+.modal-header #brand-header{
+	padding: 5px 5px;
+}
+
+.modal-content-error .modal-header #brand-header{
+	background: #ec1c24;
+}
+
+
+.modal-body {
+	color: white;
+}
+
+.modal-content-error > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > h2:nth-child(1),
+.modal-content-error > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > h3:nth-child(2),
+.col-md-9 > h2:nth-child(1){
+	color: white;
+}
+
+.dialog-logo {
+	background: #99c11f;
+	text-align: center;
+	border-radius: 10%;
+}
+
+.dialog-logo-error {
+	background: #ec1c24;
+	text-align: center;
+	border-radius: 10%;
+}
+
+#patient-logo {
+	height: 80px;
+}
+
+#menu-icon {
+	color: #FFF;
+}
+
+#messages-main .ms-block {
+	padding: 23px 10px 0;
+}
+
+.panel-primary {
+	border-color: #ec1c24;
+}
+input.form-control {
+	border-color: #ec1c24;
+}
+
+.form-control:focus {
+  border-color: #ec1c24;
+}
+
+.input-lg-login {
+	height: 60px;
+	line-height: 1.3333333;
+}
+.corporate
+{
+	background-color: #E0292B !important;
+}
+
+.text-corporate
+{
+	color: #E0292B !important;
+}
+.curved-borders{
+	border-radius: 10px;
+}
+
+.pagination > .active > a{
+	background-color: #E0292B !important;
+}
+
+.appointmentInputs{
+	border-radius: 10px;
+	border: 1px solid #E0292B !important;
+}
+
+.btn-action-sm-mirror {
+	background-color: #FFF !important;
+	border-radius: 10px;
+	color: #E0292B;
+	border: 1px solid #E0292B;
+	font-weight: bold;
+}
